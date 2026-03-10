@@ -47,18 +47,50 @@ h6 {
 
 /* NAVBAR */
 .navbar {
-    padding: 15px 0;
+    padding: 10px 0;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     background: var(--white);
 }
 
 .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+}
+
+.logo-img {
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+}
+
+.brand-title {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 24px;
+    font-size: 1.6rem;
     color: var(--primary-color) !important;
-    text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.brand-title span {
+    color: inherit;
+}
+
+.brand-slogan {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    letter-spacing: 0.3px;
+    text-transform: none;
+    white-space: nowrap;
 }
 
 .nav-link {
@@ -831,14 +863,22 @@ footer {
 }
 
 .footer-logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-.footer-logo span {
-    color: var(--primary-color);
+.footer-logo-img {
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer .brand-title {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.footer .brand-slogan {
+    font-size: 0.6rem;
 }
 
 .footer-links ul {
