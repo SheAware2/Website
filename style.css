@@ -1,10 +1,15 @@
 :root {
-    --primary-color: #A01D11;
-    /* Love Uganda inspired Red */
-    --secondary-color: #1a3c5a;
-    /* Deep Navy */
-    --accent-color: #e36414;
-    /* Warm Orange from original sheaware */
+    --primary-color: #5E1064;
+    /* Purple */
+    --secondary-color: #78350F;
+    /* Brown */
+    --accent-color: #D97706;
+    /* Amber/Gold */
+    /* --newsletter-text-color: #F7E7CE; */
+
+     --newsletter-text-color: #8F6B29; /* Darker text for better contrast on light background */
+
+    /* Cream/Beige for Newsletter */
     --text-dark: #2d3436;
     --text-muted: #636e72;
     --bg-light: #f8f9fa;
@@ -12,6 +17,11 @@
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
     --transition: all 0.3s ease;
+}
+
+/* Override Bootstrap text-primary */
+.text-primary {
+    color: #D648D7 !important;
 }
 
 body {
@@ -119,7 +129,7 @@ h6 {
     background-color: var(--secondary-color);
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(160, 29, 17, 0.3);
+    box-shadow: 0 5px 15px rgba(94, 16, 100, 0.3);
 }
 
 /* HERO SECTION CAROUSEL (FULL-BLEED) */
@@ -282,7 +292,7 @@ h6 {
     border: 2px solid var(--primary-color);
     display: inline-block;
     text-decoration: none;
-    box-shadow: 0 10px 20px rgba(160, 29, 17, 0.2);
+    box-shadow: 0 10px 20px rgba(94, 16, 100, 0.2);
 }
 
 .btn-premium-red:hover {
@@ -290,7 +300,7 @@ h6 {
     border-color: var(--secondary-color);
     color: var(--white);
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(26, 60, 90, 0.3);
+    box-shadow: 0 15px 30px rgba(120, 53, 15, 0.3);
 }
 
 .btn-premium-navy {
@@ -305,7 +315,7 @@ h6 {
     border: 2px solid var(--secondary-color);
     display: inline-block;
     text-decoration: none;
-    box-shadow: 0 10px 20px rgba(26, 60, 90, 0.2);
+    box-shadow: 0 10px 20px rgba(120, 53, 15, 0.2);
 }
 
 /* UNIQUE SECTION: WHAT WE DO (Visual Story Style) */
@@ -335,7 +345,7 @@ h6 {
 .story-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(26, 60, 90, 0.9) 10%, transparent 60%);
+    background: linear-gradient(to top, rgba(120, 53, 15, 0.9) 10%, transparent 60%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -349,7 +359,7 @@ h6 {
 }
 
 .story-card:hover .story-overlay {
-    background: linear-gradient(to top, rgba(160, 29, 17, 0.9) 20%, transparent 70%);
+    background: linear-gradient(to top, rgba(94, 16, 100, 0.9) 20%, transparent 70%);
 }
 
 .story-content h4 {
@@ -403,7 +413,7 @@ h6 {
     margin: 0 auto 30px;
     font-size: 35px;
     color: var(--primary-color);
-    box-shadow: 0 10px 25px rgba(160, 29, 17, 0.15);
+    box-shadow: 0 10px 25px rgba(94, 16, 100, 0.15);
     position: relative;
     z-index: 1;
 }
@@ -422,7 +432,7 @@ h6 {
 .glass-help-card:hover {
     transform: translateY(-15px);
     background: var(--white);
-    box-shadow: 0 30px 60px rgba(160, 29, 17, 0.1);
+    box-shadow: 0 30px 60px rgba(94, 16, 100, 0.1);
 }
 
 .glass-help-card:hover .help-glow-icon {
@@ -481,7 +491,7 @@ h6 {
     position: absolute;
     inset: -10px;
     border-radius: 50%;
-    border: 2px dashed rgba(160, 29, 17, 0.2);
+    border: 2px dashed rgba(94, 16, 100, 0.2);
     animation: rotate 20s linear infinite;
 }
 
@@ -498,7 +508,7 @@ h6 {
 .team-profile-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
-    box-shadow: 0 20px 40px rgba(160, 29, 17, 0.08);
+    box-shadow: 0 20px 40px rgba(94, 16, 100, 0.08);
 }
 
 .team-profile-card h5 {
@@ -507,7 +517,7 @@ h6 {
     margin-bottom: 5px;
 }
 
-.team-profile-card .role {
+.team-profile-card .ro  le {
     color: var(--primary-color);
     font-weight: 700;
     font-size: 0.85rem;
@@ -524,7 +534,7 @@ h6 {
 
 /* CONTACT PAGE HEADER */
 .contact-header {
-    background: linear-gradient(rgba(26, 60, 90, 0.85), rgba(26, 60, 90, 0.85)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=2070') center/cover no-repeat;
+    background: linear-gradient(rgba(120, 53, 15, 0.85), rgba(120, 53, 15, 0.85)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=2070') center/cover no-repeat;
     padding: 120px 0;
     text-align: center;
     color: var(--white);
@@ -606,7 +616,7 @@ h6 {
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(160, 29, 17, 0.1);
+    box-shadow: 0 0 0 0.25rem rgba(94, 16, 100, 0.1);
     border-color: var(--primary-color);
 }
 
@@ -625,7 +635,7 @@ h6 {
 .btn-send:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(160, 29, 17, 0.3);
+    box-shadow: 0 5px 15px rgba(94, 16, 100, 0.3);
 }
 
 /* MAP */
@@ -675,7 +685,7 @@ h6 {
 
 .elegant-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(160, 29, 17, 0.1);
+    box-shadow: 0 20px 50px rgba(94, 16, 100, 0.1);
 }
 
 .elegant-card i {
@@ -776,7 +786,7 @@ h6 {
 
 /* IMPACT / STATS */
 .stats-section {
-    background: linear-gradient(rgba(26, 60, 90, 0.9), rgba(26, 60, 90, 0.9)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2070') center/cover fixed;
+    background: linear-gradient(rgba(120, 53, 15, 0.9), rgba(120, 53, 15, 0.9)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2070') center/cover fixed;
     color: var(--white);
     padding: 100px 0;
 }
@@ -839,7 +849,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, transparent, rgba(160, 29, 17, 0.2));
+    background: linear-gradient(to bottom, transparent, rgba(94, 16, 100, 0.2));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -857,7 +867,7 @@ h6 {
 
 /* FOOTER */
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--white);
     padding: 80px 0 20px;
 }
@@ -910,6 +920,12 @@ footer {
 
 .social-links a:hover {
     color: var(--primary-color);
+}
+
+/* Footer Newsletter Heading */
+.footer h5 {
+    color: var(--newsletter-text-color) !important;
+    border: none;
 }
 
 @media (max-width: 768px) {
