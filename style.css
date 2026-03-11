@@ -7,7 +7,8 @@
     /* Amber/Gold */
     /* --newsletter-text-color: #F7E7CE; */
 
-     --newsletter-text-color: #8F6B29; /* Darker text for better contrast on light background */
+    --newsletter-text-color: #8F6B29;
+    /* Darker text for better contrast on light background */
 
     /* Cream/Beige for Newsletter */
     --text-dark: #2d3436;
@@ -19,9 +20,26 @@
     --transition: all 0.3s ease;
 }
 
-/* Override Bootstrap text-primary */
+/* Override Bootstrap primary colors */
 .text-primary {
-    color: #D648D7 !important;
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
 }
 
 body {
@@ -318,6 +336,36 @@ h6 {
     box-shadow: 0 10px 20px rgba(120, 53, 15, 0.2);
 }
 
+.btn-premium-navy:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(94, 16, 100, 0.3);
+}
+
+/* Brown Outline Buttons (for Donation Selection) */
+.btn-outline-brown {
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-brown:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-check:checked+.btn-outline-brown {
+    background-color: var(--secondary-color) !important;
+    color: var(--white) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 5px 15px rgba(120, 53, 15, 0.3);
+}
+
 /* UNIQUE SECTION: WHAT WE DO (Visual Story Style) */
 .do-section {
     padding: 100px 0;
@@ -517,7 +565,7 @@ h6 {
     margin-bottom: 5px;
 }
 
-.team-profile-card .ro  le {
+.team-profile-card .ro le {
     color: var(--primary-color);
     font-weight: 700;
     font-size: 0.85rem;
@@ -727,7 +775,7 @@ h6 {
 .value-item:hover {
     transform: translateY(-12px) scale(1.03);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    background-color: #234d6e;
+    background-color: var(--primary-color);
     /* Slightly lighter version of secondary for depth */
 }
 
@@ -931,5 +979,28 @@ footer {
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+}
+
+/* PULSE ANIMATION FOR SUPPORT ICON */
+.pulse-icon {
+    animation: pulse 3s infinite ease-in-out;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
     }
 }
