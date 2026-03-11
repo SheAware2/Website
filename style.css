@@ -1059,3 +1059,62 @@ footer {
         opacity: 0.1;
     }
 }
+
+/* EXTRA MOBILE RESPONSIVENESS FIXES */
+@media (max-width: 575px) {
+    .logo-img {
+        max-height: 45px !important;
+    }
+
+    .brand-title {
+        font-size: 1.2rem !important;
+    }
+
+    .brand-slogan {
+        font-size: 0.5rem !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+    }
+
+    .navbar-brand {
+        max-width: 80% !important;
+        margin-right: 0 !important;
+    }
+
+    .hero-section {
+        height: 65vh !important;
+        /* Shorter to show more image width */
+        min-height: 460px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    .hero-content p.lead {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.2rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .hero-content .btn {
+        padding: 7px 12px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand-title {
+        font-size: 1.1rem !important;
+    }
+
+    .brand-slogan {
+        display: none !important;
+        /* Hide on very small screens to keep toggler on same row */
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem !important;
+    }
+}
